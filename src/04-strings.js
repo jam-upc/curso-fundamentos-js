@@ -36,3 +36,12 @@ Este es el contenido
 - nota dos
 `;
 console.log(nota);
+
+
+const texto1 = "JavaScript es genial";
+texto1.slice(0, 10);   // "JavaScript"
+texto1.slice(11);      // "es genial"
+//texto1.slice(-6);      // "genial"
+
+const texto2 = "hola mundo";
+texto2.substring(0, 4); // "hola"
