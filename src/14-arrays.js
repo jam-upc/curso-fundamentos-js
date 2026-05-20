@@ -32,3 +32,5 @@ console.log(notas4);
 const notas5 = ['Nota 1', 'Nota 2'];
 console.log(notas5.splice(1,1)); // eliminar posicion 1
 console.log(notas5);
+
+console.log (notas5.indexOf('Nota 2'));
