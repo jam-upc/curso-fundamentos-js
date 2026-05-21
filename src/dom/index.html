@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Nova - Landing</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        margin: 0;
+        line-height: 1.4;
+        color: #111;
+      }
+      .container {
+        width: min(960px, 92vw);
+        margin: 0 auto;
+        padding: 24px 0;
+      }
+      header {
+        border-bottom: 1px solid #eee;
+        background: #fff;
+        position: sticky;
+        top: 0;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: #111;
+      }
+      .links {
+        display: flex;
+        gap: 12px;
+      }
+      .links a {
+        text-decoration: none;
+        color: #111;
+      }
+      .hero {
+        padding: 28px 0;
+      }
+      .hero h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      .hero p {
+        margin: 0 0 16px;
+        color: #444;
+      }
+      .btn {
+        border: 1px solid #111;
+        background: #111;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .btn.secondary {
+        background: transparent;
+        color: #111;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+      @media (max-width: 760px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        border: 1px solid #eee;
+        border-radius: 14px;
+        padding: 14px;
+        background: #fff;
+      }
+      .card h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+      .price {
+        font-weight: 700;
+      }
+      .muted {
+        color: #555;
+      }
+      .section-title {
+        margin: 24px 0 10px;
+        font-size: 18px;
+      }
+      #opiniones {
+        display: grid;
+        gap: 12px;
+      }
+      .opinion {
+        border: 1px solid #eee;
+        border-radius: 14px;
+        padding: 12px;
+        background: #fafafa;
+      }
+      .opinion header {
+        position: static;
+        border: none;
+        background: transparent;
+      }
+      .opinion .meta {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      footer {
+        border-top: 1px solid #eee;
+        padding: 22px 0;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <strong id="brand">Tienda Nova</strong>
+        </div>
+
+        <nav class="links" aria-label="Navegación">
+          <a href="#productos" class="nav-link">Productos</a>
+          <a href="#opiniones-section" class="nav-link">Opiniones</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="inicio">
+        <h1>Productos útiles, entrega rápida.</h1>
+        <p>Tecnología para ti, calidad para ti.</p>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap">
+          <button class="btn" id="btn-comprar">Ver ofertas</button>
+        </div>
+      </section>
+
+      <section id="productos">
+        <h2 class="section-title">Productos destacados</h2>
+
+        <div class="grid" id="grid-productos">
+          <article class="card producto" data-sku="NOVA-001">
+            <h3 class="producto-nombre">Audífonos Nova</h3>
+            <p class="muted producto-desc">Audio nítido para trabajar y estudiar.</p>
+            <p class="price producto-precio">$39.99</p>
+            <button class="btn secondary producto-btn" type="button">Comprar</button>
+          </article>
+
+          <article class="card producto" data-sku="NOVA-002">
+            <h3 class="producto-nombre">Mouse Ergo</h3>
+            <p class="muted producto-desc">Cómodo para largas jornadas.</p>
+            <p class="price producto-precio">$24.90</p>
+            <button class="btn secondary producto-btn" type="button">Comprar</button>
+          </article>
+
+          <article class="card producto" data-sku="NOVA-003">
+            <h3 class="producto-nombre">Teclado Compact</h3>
+            <p class="muted producto-desc">Minimal y eficiente.</p>
+            <p class="price producto-precio">$49.00</p>
+            <button class="btn secondary producto-btn" type="button">Comprar</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="opiniones-section">
+        <h2 class="section-title">Opiniones de usuarios</h2>
+        <div id="opiniones"></div>
+      </section>
+
+      <section id="faq">
+        <h2 class="section-title">FAQ</h2>
+        <div class="card">
+          <p><strong>¿Cuánto tarda el envío?</strong></p>
+          <p class="muted">24-48h en ciudades principales.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <small>DOM básico.</small>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
