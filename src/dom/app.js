@@ -55,7 +55,7 @@ function createOpinionElement(opinion) {
 
     // Creamos la etiqueta para la puntuación (<span>* 5/5</span>)
     const rating = document.createElement('span');
-    rating.textContent = `* ${opinion.rating}/5`;
+    rating.textContent = `★ ${opinion.rating}/5`;
 
     // Metemos el nombre y las estrellas dentro del div "meta"
     meta.appendChild(nombre);
